@@ -18,7 +18,7 @@ public class Vehicle implements Engine, Chassis {
         vehicleManufacturedDate = Calendar.getInstance().getTime();
         vehicleMake = "Generic";
         vehicleModel = "Generic";
-        vehicleType = "None";
+        vehicleType = "Generic";
         vehicleEngine = new ManufacturedEngine();
         driveTrain = "2WD: Two-Wheel Drive";
     }
@@ -126,6 +126,10 @@ public class Vehicle implements Engine, Chassis {
     @Override
     public void setChassisType(String vehicleChassis) {
         vehicleFrame.setChassisType(vehicleChassis);
+    }
+
+    public Engine getVehicleEngine() {
+        return vehicleEngine;
     }
 
     @Override

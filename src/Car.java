@@ -13,6 +13,7 @@ public class Car extends Vehicle {
         feature[1] = new ExteriorFeature("Moonroof");
         feature[2] = new InteriorFeature("AM/FM Radio");
         feature[3] = new InteriorFeature("Air Conditioning");
+        carAxle = 2;
     }
 
     //Car constructor with all values passed
@@ -31,7 +32,7 @@ public class Car extends Vehicle {
         String exteriorFeatures = "";
         for(Feature s : feature){
             if (s instanceof ExteriorFeature){
-                exteriorFeatures += s + "\n";
+                exteriorFeatures +=  "\n\t"+ s;
             }
         }
         return exteriorFeatures;
@@ -41,18 +42,23 @@ public class Car extends Vehicle {
         String interiorFeatures = "";
         for(Feature s : feature){
             if (s instanceof InteriorFeature){
-                interiorFeatures += s + "\n";
+                interiorFeatures += "\n\t"+ s;
             }
         }
         return interiorFeatures;
     }
 
+
     @Override
     public String toString() {
-        return "Manufacturer Name: " +
-                "feature=" + Arrays.toString(feature) +
-                ", carAxle=" + carAxle +
-                '}';
+        return  "Manufacturer Name: " + this.getVehicleManufacturer() +
+                "\nManufactured Date: " + this.getVehicleManufacturedDate() +
+                "\nVehicle Make: " + this.getVehicleMake() +
+                "\nVehicle Model: " + this.getVehicleModel() +
+                "\nVehicle Type: " + this.getVehicleType() +
+                this.getVehicleEngine() +
+                "\nFeatures: " + this.getExteriorFeatures() + this.getInteriorFeatures() +
+                "\nCar Axle: " + carAxle;
     }
 }
 

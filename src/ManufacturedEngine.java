@@ -21,7 +21,7 @@ public class ManufacturedEngine implements Engine {
     }
 
     public ManufacturedEngine(String engineManufacterer, Date engineManufacteredDate, String engineMake,
-                              String engineMode, int engineCylinders, String engineType, String driveTrain) {
+                              String engineMode, String engineType, int engineCylinders,  String driveTrain) {
         this.engineManufacterer = engineManufacterer;
         this.engineManufacteredDate = engineManufacteredDate;
         this.engineMake = engineMake;

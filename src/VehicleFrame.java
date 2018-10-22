@@ -7,6 +7,10 @@ public class VehicleFrame implements Chassis {
         vehicleFrameType = "Unibody";
     }
 
+    public VehicleFrame(String vehicleFrameType) {
+        this.vehicleFrameType = vehicleFrameType;
+    }
+
     //Public method named getChassisType that didnt have a formal parameter
     //returns an instance of the interface Chassis
     public Chassis getChassisType(){
